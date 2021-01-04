@@ -9,7 +9,7 @@ import { ServiceJokesService } from '../service-jokes.service';
 export class SearchForJokesComponent implements OnInit {
   category: string;
   
-  jokes: string[] = [];
+  jokes: Object[] = [];
 
   constructor(private service: ServiceJokesService) {
     this.category = "";
@@ -25,7 +25,7 @@ export class SearchForJokesComponent implements OnInit {
           this.jokes = response.jokes;
         else {
           this.jokes = [];
-          this.jokes.push(response.message);
+          alert("Podano błędną kategorie");
         }
         this.category = "";
       });
