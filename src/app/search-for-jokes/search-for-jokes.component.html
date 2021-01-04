@@ -1,5 +1,5 @@
 <input type="text" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category">
 <button (click)="onSearchFromSpecificCategory()">Search jokes</button>
-<li *ngFor="let item of jokes.jokes">
+<li *ngFor="let item of jokes">
     {{item.joke}}
 </li>

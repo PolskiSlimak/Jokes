@@ -7,18 +7,15 @@ import { ServiceJokesService } from '../service-jokes.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  jod: [];
+  jod = [];
   constructor(private service: ServiceJokesService) { 
-    this.jod = [];
   }
 
   ngOnInit(): void {
-    this.getJokeOfDay();
   }
-  getJokeOfDay() {
+  onGetJokeOfDay() {
     this.service.getJokeOfDay().subscribe((response: any) => {
       this.jod = response.joke;
     });
   }
-  onResetJoke() {}
 }

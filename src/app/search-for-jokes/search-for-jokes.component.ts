@@ -9,10 +9,9 @@ import { ServiceJokesService } from '../service-jokes.service';
 export class SearchForJokesComponent implements OnInit {
   category: string;
   
-  jokes: Object;
+  jokes: string[] = [];
 
   constructor(private service: ServiceJokesService) {
-    this.jokes = "";
     this.category = "";
   }
 
@@ -21,8 +20,13 @@ export class SearchForJokesComponent implements OnInit {
   }
   onSearchFromSpecificCategory() {
     if(this.category != "") {
-      this.service.searchFromSpecificCategory(this.category).subscribe(response => {
-        this.jokes = response;
+      this.service.searchFromSpecificCategory(this.category).subscribe((response: any) => {
+        if(response.error == false)
+          this.jokes = response.jokes;
+        else {
+          this.jokes = [];
+          this.jokes.push(response.message);
+        }
         this.category = "";
       });
     }
