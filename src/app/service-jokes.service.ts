@@ -17,7 +17,6 @@ export class ServiceJokesService {
       "blacklistFlags=nsfw,religious,racist",
       "type=single"
     ];
-    this.setLocalStorage('jod', this.http.get(jokeLink + "?" + params.join("&")))
     return this.http.get(jokeLink + "?" + params.join("&"));
   }
 
@@ -32,5 +31,13 @@ export class ServiceJokesService {
   }
   setLocalStorage(listType: any, list: any) {
     localStorage.setItem(listType, JSON.stringify(list));
+  }
+  getTwoPartJoke() {
+    let jokeLink = this.joke + "Any";
+    const params = [
+      "blacklistFlags=nsfw,religious,racist",
+      "type=twopart"
+    ];
+    return this.http.get(jokeLink + "?" + params.join("&"));
   }
 }

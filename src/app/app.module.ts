@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SearchForJokesComponent } from './search-for-jokes/search-for-jokes.component';
+import { TwopartJokesComponent } from './twopart-jokes/twopart-jokes.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchForJokesComponent
+    SearchForJokesComponent,
+    TwopartJokesComponent
   ],
   imports: [
     BrowserModule,
