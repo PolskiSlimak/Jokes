@@ -9,7 +9,7 @@ import { ServiceJokesService } from '../service-jokes.service';
 export class SearchForJokesComponent implements OnInit {
   category: string;
   
-  jokes: Object[] = [];
+  jokes: any = [];
 
   constructor(private service: ServiceJokesService) {
     this.category = "";
