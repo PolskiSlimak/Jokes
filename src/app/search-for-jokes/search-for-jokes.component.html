@@ -1,8 +1,10 @@
-<h4>
-    Type category to search below. Acceptable cattegories: Any, Misc, Programming, Dark, Pun, Spooky, Christmas
-</h4>
-<input type="text" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category">
-<button (click)="onSearchFromSpecificCategory()">Search jokes</button>
-<li *ngFor="let item of jokes">
-    {{item.joke}}
-</li>
+<div class = "container">
+    <h4>
+        Type category to search below. Acceptable cattegories: Any, Misc, Programming, Dark, Pun, Spooky, Christmas
+    </h4>
+    <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category">
+    <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button>
+    <li *ngFor="let item of jokes">
+        {{item.joke}}
+    </li>
+</div>
