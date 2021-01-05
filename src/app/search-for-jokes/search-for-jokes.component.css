@@ -1,8 +1,12 @@
 .container {
     left: 50%;
 }
+.grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1f);
+    gap: 5px;
+}
 .simple-input {
-    display: block;
     padding: 2px;
     border: 4px solid #F1B720;
     border-radius: 5px;
@@ -22,7 +26,7 @@ border-color: #EBD292;
 display: inline-block;
 margin: 10px;
 padding: 8px 15px;
-background: #B8ED01;
+background: #949090;
 border: 1px solid rgba(0,0,0,0.15);
 border-radius: 4px;
 transition: all 0.3s ease-out;
@@ -34,4 +38,4 @@ text-decoration: none;
 text-shadow: 0 1px rgba(255,255,255,0.7);
 outline:none;
 }
-.modern:hover  { background: #C7FE0A; }
+.modern:hover  { background: #e2e2e2; }

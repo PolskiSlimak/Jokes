@@ -4,7 +4,9 @@
     </h4>
     <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category">
     <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button>
-    <li *ngFor="let item of jokes">
-        {{item.joke}}
-    </li>
+    <div class = "grid">
+        <li *ngFor="let item of jokes">
+            {{item.joke}}
+        </li>
+    </div>
 </div>
