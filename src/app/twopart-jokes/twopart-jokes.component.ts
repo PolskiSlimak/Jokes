@@ -16,7 +16,10 @@ export class TwopartJokesComponent implements OnInit {
   onGetTwoPartJoke() {
     this.service.getTwoPartJoke().subscribe((response: any) => {
       this.first = response.setup;
-      setInterval(() => {this.second = response.delivery;}, 4000);
+      this.second = "";
+      setTimeout(() => {
+        this.second = response.delivery;
+      }, 2500);
     });
   }
 }
